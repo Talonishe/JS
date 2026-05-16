@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Catalog - Варіант 2</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; background: #f8f9fa; }
+    .container { max-width: 1200px; margin: 0 auto; background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
+    button { padding: 10px 16px; margin: 5px; background: #007bff; color: white; border: none; border-radius: 6px; cursor: pointer; }
+    button:hover { background: #0056b3; }
+    input, select { padding: 10px; margin: 8px 0; width: 100%; max-width: 400px; border: 1px solid #ccc; border-radius: 6px; }
+    .product-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 18px; margin-top: 20px; }
+    .product-card { border: 1px solid #ddd; padding: 18px; border-radius: 10px; background: #fafafa; }
+    .log { background: #f1f3f5; padding: 12px; border-radius: 8px; margin-top: 20px; max-height: 300px; overflow-y: auto; font-family: monospace; font-size: 14px; }
+    .form-container { background: #f8f9fa; padding: 20px; border-radius: 10px; margin: 20px 0; border: 1px solid #ddd; }
+    h1, h2 { color: #222; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Product Catalog (Варіант 2)</h1>
+    <p><strong>Практична робота 5 — Робота з об'єктами</strong></p>
+
+    <!-- Форма додавання товару -->
+    <div class="form-container">
+      <h2>Додати новий товар</h2>
+      <input type="text" id="id" placeholder="ID (наприклад: 6)" />
+      <input type="text" id="name" placeholder="Назва товару" />
+      <input type="number" id="price" placeholder="Ціна (грн)" />
+      <input type="text" id="category" placeholder="Категорія (Laptops / Smartphones)" />
+      <input type="number" id="stock" placeholder="Кількість на складі" />
+      <input type="text" id="description" placeholder="Опис товару" />
+      <button onclick="addNewProduct()">Додати товар</button>
+    </div>
+
+    <div>
+      <button onclick="addSampleProducts()">Завантажити тестові товари</button>
+      <button onclick="showAllProducts()">Всі товари</button>
+      <button onclick="showByCategory('Laptops')">Ноутбуки</button>
+      <button onclick="showByCategory('Smartphones')">Смартфони</button>
+      <button onclick="showExpensive()">Дорогі (> 35000 ₴)</button>
+    </div>
+
+    <h3>Пошук</h3>
+    <input type="text" id="searchInput" placeholder="Назва або опис..." onkeyup="if(event.key==='Enter') searchProducts()" />
+    <button onclick="searchProducts()">Пошук</button>
+
+    <div class="product-list" id="productList"></div>
+
+    <button onclick="showStats()">Показати статистику по категоріях</button>
+    
+    <div id="stats" class="log"></div>
+    <div id="consoleLog" class="log"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
