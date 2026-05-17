@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Bank System OOP</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Банківська система</h1>
+
+    <!-- Створення рахунку -->
+    <div class="card">
+
+        <h2>Створити рахунок</h2>
+
+        <input type="text"
+               id="owner"
+               placeholder="Власник">
+
+        <input type="number"
+               id="balance"
+               placeholder="Початковий баланс">
+
+        <select id="accountType">
+
+            <option value="savings">
+                Savings Account
+            </option>
+
+            <option value="checking">
+                Checking Account
+            </option>
+
+            <option value="credit">
+                Credit Card
+            </option>
+
+        </select>
+
+        <button id="createBtn">
+            Створити
+        </button>
+
+    </div>
+
+    <!-- Операції -->
+    <div class="card">
+
+        <h2>Банківські операції</h2>
+
+        <input type="number"
+               id="accountId"
+               placeholder="Номер рахунку">
+
+        <input type="number"
+               id="amount"
+               placeholder="Сума">
+
+        <button id="depositBtn">
+            Поповнення
+        </button>
+
+        <button id="withdrawBtn">
+            Зняття
+        </button>
+
+    </div>
+
+    <!-- Переказ -->
+    <div class="card">
+
+        <h2>Переказ коштів</h2>
+
+        <input type="number"
+               id="fromAccount"
+               placeholder="З рахунку">
+
+        <input type="number"
+               id="toAccount"
+               placeholder="На рахунок">
+
+        <input type="number"
+               id="transferAmount"
+               placeholder="Сума">
+
+        <button id="transferBtn">
+            Переказати
+        </button>
+
+    </div>
+
+    <!-- Історія -->
+    <div class="card">
+
+        <h2>Історія транзакцій</h2>
+
+        <div id="history"></div>
+
+    </div>
+
+    <!-- Звіт -->
+    <div class="card">
+
+        <h2>Рахунки</h2>
+
+        <div id="accounts"></div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
