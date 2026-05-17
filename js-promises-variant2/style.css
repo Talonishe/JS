@@ -1,0 +1,43 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f0f2f5;
+    padding: 30px;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+h1 {
+    text-align: center;
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
+    border: none;
+    background: #0077ff;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+button:hover {
+    background: #005dd1;
+}
+
+.logs {
+    background: #111;
+    color: #00ff88;
+    padding: 15px;
+    min-height: 300px;
+    font-family: monospace;
+    overflow-y: auto;
+    border-radius: 8px;
+    white-space: pre-line;
+}
