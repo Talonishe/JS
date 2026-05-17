@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>GitHub User Explorer</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>GitHub User Explorer</h1>
+
+    <!-- SEARCH -->
+    <div class="search-box">
+
+        <input type="text"
+               id="usernameInput"
+               placeholder="Введіть GitHub username">
+
+        <button id="searchBtn">
+            Пошук
+        </button>
+
+    </div>
+
+    <!-- LOADING -->
+    <div id="loading">
+
+        <div class="spinner"></div>
+
+        <p>Завантаження...</p>
+
+    </div>
+
+    <!-- ERROR -->
+    <div id="error"></div>
+
+    <!-- USER -->
+    <div id="profile"></div>
+
+    <!-- SORT -->
+    <div id="sortControls">
+
+        <select id="sortSelect">
+
+            <option value="stars">
+                Сортувати по stars
+            </option>
+
+            <option value="forks">
+                Сортувати по forks
+            </option>
+
+            <option value="updated">
+                Сортувати по updated
+            </option>
+
+        </select>
+
+    </div>
+
+    <!-- REPOS -->
+    <div id="repos"></div>
+
+    <!-- REPO DETAILS -->
+    <div id="repoDetails"></div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

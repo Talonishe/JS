@@ -1,0 +1,114 @@
+body {
+    font-family: Arial;
+    background: #f3f5f7;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+}
+
+.search-box {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+input,
+button,
+select {
+    padding: 12px;
+    font-size: 16px;
+}
+
+input {
+    flex: 1;
+}
+
+button {
+    cursor: pointer;
+}
+
+.card {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.repo-card {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.repo-card:hover {
+    background: #eef4ff;
+}
+
+.grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(300px, 1fr));
+
+    gap: 15px;
+}
+
+#loading {
+    display: none;
+    text-align: center;
+}
+
+.spinner {
+    width: 60px;
+    height: 60px;
+
+    border: 6px solid #ddd;
+    border-top: 6px solid #0077ff;
+
+    border-radius: 50%;
+
+    margin: auto;
+
+    animation: spin 1s linear infinite;
+}
+
+#error {
+    color: red;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+img {
+    border-radius: 50%;
+    width: 120px;
+}
+
+@keyframes spin {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+@media(max-width: 700px) {
+
+    .search-box {
+        flex-direction: column;
+    }
+
+}
