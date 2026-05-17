@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Функції вищого порядку - Валідатор форм</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Реєстраційна форма</h1>
+
+        <form id="registerForm">
+
+            <div class="form-group">
+                <label>Ім'я</label>
+                <input type="text" id="name">
+                <small class="error" id="nameError"></small>
+            </div>
+
+            <div class="form-group">
+                <label>Email</label>
+                <input type="text" id="email">
+                <small class="error" id="emailError"></small>
+            </div>
+
+            <div class="form-group">
+                <label>Пароль</label>
+                <input type="password" id="password">
+                <small class="error" id="passwordError"></small>
+            </div>
+
+            <div class="form-group">
+                <label>Логін</label>
+                <input type="text" id="username">
+                <small class="error" id="usernameError"></small>
+            </div>
+
+            <button type="submit">Зареєструватися</button>
+
+        </form>
+
+        <div id="successMessage"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
